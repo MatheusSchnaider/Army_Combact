@@ -95,7 +95,7 @@ namespace GameClient
 		{
 			try
 			{
-				this.client = new Client("192.168.0.107", 5000);
+				this.client = new Client("127.0.0.1", 5000);
 
 				this.client.Connect(this.OnReceiveMessage);
 

@@ -38,7 +38,7 @@
             // 
             // menuBar
             // 
-            this.menuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
+            this.menuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.menuBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.jogarToolStripMenuItem,
             this.chatToolStripMenuItem,

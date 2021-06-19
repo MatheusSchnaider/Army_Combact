@@ -38,13 +38,13 @@
             // txtMessage
             // 
             this.txtMessage.AcceptsTab = true;
-            this.txtMessage.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtMessage.BackColor = System.Drawing.Color.LightSlateGray;
             this.txtMessage.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMessage.ForeColor = System.Drawing.Color.Black;
-            this.txtMessage.Location = new System.Drawing.Point(11, 501);
+            this.txtMessage.Location = new System.Drawing.Point(12, 506);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(714, 56);
+            this.txtMessage.Size = new System.Drawing.Size(714, 39);
             this.txtMessage.TabIndex = 1;
             this.txtMessage.TextChanged += new System.EventHandler(this.txtMessage_TextChanged);
             // 
@@ -60,28 +60,32 @@
             // 
             // rtxtHistory
             // 
-            this.rtxtHistory.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.rtxtHistory.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.rtxtHistory.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxtHistory.Location = new System.Drawing.Point(11, 40);
+            this.rtxtHistory.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.rtxtHistory.Location = new System.Drawing.Point(12, 45);
             this.rtxtHistory.Margin = new System.Windows.Forms.Padding(2);
             this.rtxtHistory.Name = "rtxtHistory";
             this.rtxtHistory.ReadOnly = true;
             this.rtxtHistory.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.rtxtHistory.Size = new System.Drawing.Size(778, 456);
+            this.rtxtHistory.Size = new System.Drawing.Size(714, 444);
             this.rtxtHistory.TabIndex = 4;
             this.rtxtHistory.Text = "";
+            this.rtxtHistory.TextChanged += new System.EventHandler(this.rtxtHistory_TextChanged);
             // 
             // btnSend
             // 
+            this.btnSend.BackColor = System.Drawing.Color.Transparent;
             this.btnSend.BackgroundImage = global::GameClient.Properties.Resources.Send_52;
             this.btnSend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSend.FlatAppearance.BorderSize = 0;
             this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSend.Location = new System.Drawing.Point(736, 501);
+            this.btnSend.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnSend.Location = new System.Drawing.Point(741, 506);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(52, 52);
+            this.btnSend.Size = new System.Drawing.Size(41, 39);
             this.btnSend.TabIndex = 5;
-            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.UseVisualStyleBackColor = false;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // btnClose
@@ -90,9 +94,9 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(756, 3);
+            this.btnClose.Location = new System.Drawing.Point(741, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(32, 32);
+            this.btnClose.Size = new System.Drawing.Size(51, 39);
             this.btnClose.TabIndex = 2;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -103,18 +107,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.ClientSize = new System.Drawing.Size(804, 570);
+            this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.ClientSize = new System.Drawing.Size(794, 570);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.rtxtHistory);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtMessage);
+            this.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(100, 100);
             this.Name = "Chat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chat";
+            this.TransparencyKey = System.Drawing.Color.White;
             this.ResumeLayout(false);
             this.PerformLayout();
 

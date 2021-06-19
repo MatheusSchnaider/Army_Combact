@@ -127,5 +127,10 @@ namespace GameClient
         {
             btnSend.Enabled = txtMessage.Text.Trim() != String.Empty;
         }
+
+        private void rtxtHistory_TextChanged(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

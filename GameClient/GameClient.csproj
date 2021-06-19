@@ -162,9 +162,6 @@
     <None Include="Resources\Add_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Arregar_50.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Check_32.png" />
   </ItemGroup>
   <ItemGroup>
@@ -241,6 +238,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Barco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Arregar_50.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

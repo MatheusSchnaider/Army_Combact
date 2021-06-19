@@ -38,7 +38,7 @@
             // 
             // menuBar
             // 
-            this.menuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.menuBar.BackColor = System.Drawing.Color.MidnightBlue;
             this.menuBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.jogarToolStripMenuItem,
             this.chatToolStripMenuItem,
@@ -46,43 +46,43 @@
             this.sairDoJogoToolStripMenuItem});
             this.menuBar.Location = new System.Drawing.Point(0, 0);
             this.menuBar.Name = "menuBar";
-            this.menuBar.Size = new System.Drawing.Size(1384, 31);
+            this.menuBar.Size = new System.Drawing.Size(1384, 27);
             this.menuBar.TabIndex = 0;
             this.menuBar.Text = "menuBar";
             // 
             // jogarToolStripMenuItem
             // 
-            this.jogarToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jogarToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jogarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.jogarToolStripMenuItem.Name = "jogarToolStripMenuItem";
-            this.jogarToolStripMenuItem.Size = new System.Drawing.Size(67, 27);
+            this.jogarToolStripMenuItem.Size = new System.Drawing.Size(66, 23);
             this.jogarToolStripMenuItem.Text = "Jogar";
             this.jogarToolStripMenuItem.Click += new System.EventHandler(this.jogarToolStripMenuItem_Click);
             // 
             // chatToolStripMenuItem
             // 
-            this.chatToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chatToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chatToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.chatToolStripMenuItem.Name = "chatToolStripMenuItem";
-            this.chatToolStripMenuItem.Size = new System.Drawing.Size(58, 27);
+            this.chatToolStripMenuItem.Size = new System.Drawing.Size(57, 23);
             this.chatToolStripMenuItem.Text = "Chat";
             this.chatToolStripMenuItem.Click += new System.EventHandler(this.chatToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
-            this.sairToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sairToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sairToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(72, 27);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(75, 23);
             this.sairToolStripMenuItem.Text = "Logout";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // sairDoJogoToolStripMenuItem
             // 
-            this.sairDoJogoToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.sairDoJogoToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sairDoJogoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.sairDoJogoToolStripMenuItem.Name = "sairDoJogoToolStripMenuItem";
-            this.sairDoJogoToolStripMenuItem.Size = new System.Drawing.Size(121, 27);
+            this.sairDoJogoToolStripMenuItem.Size = new System.Drawing.Size(129, 23);
             this.sairDoJogoToolStripMenuItem.Text = "Sair do Jogo";
             this.sairDoJogoToolStripMenuItem.Click += new System.EventHandler(this.sairDoJogoToolStripMenuItem_Click);
             // 

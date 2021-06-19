@@ -169,5 +169,10 @@ namespace GameClient
 				this.btnRecovery.BackgroundImage = global::GameClient.Properties.Resources.Save_32;
 			}
 		}
-	}
+
+        private void txtBirthDate_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+    }
 }

@@ -130,7 +130,7 @@ namespace GameServer
         {
             bool result = false;
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=localhost;Initial Catalog=game;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=JSEL13D06\LOCALHOST;Initial Catalog=game;User ID=game_usr;Password=P@ssw0rd"))
             {
                 try
                 {
@@ -180,7 +180,7 @@ namespace GameServer
         {
             dynamic result;
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=localhost;Initial Catalog=game;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=JSEL13D06\LOCALHOST;Initial Catalog=game;User ID=game_usr;Password=P@ssw0rd"))
             {
                 try
                 {
@@ -235,7 +235,7 @@ namespace GameServer
         {
             dynamic result;
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=localhost;Initial Catalog=game;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=JSEL13D06\LOCALHOST;Initial Catalog=game;User ID=game_usr;Password=P@ssw0rd"))
             {
                 try
                 {
@@ -286,7 +286,7 @@ namespace GameServer
 
             try
             {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=localhost;Initial Catalog=game;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=JSEL13D06\LOCALHOST;Initial Catalog=game;User ID=game_usr;Password=P@ssw0rd"))
                 {
                     connection.Open();
 
@@ -320,7 +320,7 @@ namespace GameServer
 
             try
             {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=localhost;Initial Catalog=game;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=JSEL13D06\LOCALHOST;Initial Catalog=game;User ID=game_usr;Password=P@ssw0rd"))
                 {
                     connection.Open();
 
@@ -349,7 +349,7 @@ namespace GameServer
         {
             List<dynamic> result = new List<dynamic>();
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=localhost;Initial Catalog=game;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=JSEL13D06\LOCALHOST;Initial Catalog=game;User ID=game_usr;Password=P@ssw0rd"))
             {
                 try
                 {
@@ -396,7 +396,7 @@ namespace GameServer
         {
             bool result = false;
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=localhost;Initial Catalog=game;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=JSEL13D06\LOCALHOST;Initial Catalog=game;User ID=game_usr;Password=P@ssw0rd"))
             {
                 bool openConnection = false;
 
@@ -600,8 +600,9 @@ namespace GameServer
                                 userData = GetUser(login, password);
 
                             }
-                            catch
+                            catch (Exception ex)
                             {
+                                Console.WriteLine(ex);
                                 hasException = true;
                             }
 

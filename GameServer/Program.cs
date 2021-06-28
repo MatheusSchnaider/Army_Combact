@@ -70,7 +70,10 @@ namespace GameServer
             Terra = 1,
             Pedra = 2,
             Item = 3,
-            Unidade = 4
+            Cabo = 4,
+            Coronel = 5,
+            Sargento = 6,
+            Tenente = 7
         }
         private static int[] InitializeArrayWithNoDuplicates(int start, int size)
         {
@@ -80,7 +83,10 @@ namespace GameServer
         }
         private static int[] GenerateMatchData()
         {
-            int qtdUnidade = 80;
+            int qtdCabo = 20;
+            int qtdCoronel = 20;
+            int qtdSargento = 20;
+            int qtdTenente = 20;
             int qtdPedra = 110;
             int qtdTerra = 160;
             int qtdPosicoes = 350;
@@ -90,9 +96,24 @@ namespace GameServer
 
             int[] itens = new int[qtdPosicoes];
 
-            for (int i = 0; i < qtdUnidade / 2; i++)
+            for (int i = 0; i < qtdCabo / 2; i++)
             {
-                itens[indexes[index++]] = (Int32)Type.Unidade;
+                itens[indexes[index++]] = (Int32)Type.Cabo;
+            }
+
+            for (int i = 0; i < qtdCoronel / 2; i++)
+            {
+                itens[indexes[index++]] = (Int32)Type.Coronel;
+            }
+
+            for (int i = 0; i < qtdSargento / 2; i++)
+            {
+                itens[indexes[index++]] = (Int32)Type.Sargento;
+            }
+
+            for (int i = 0; i < qtdTenente / 2; i++)
+            {
+                itens[indexes[index++]] = (Int32)Type.Tenente;
             }
 
             for (int i = 0; i < qtdTerra / 2; i++)
@@ -109,9 +130,24 @@ namespace GameServer
             index = 0;
             indexes = InitializeArrayWithNoDuplicates(175, qtdPosicoes / 2);
 
-            for (int i = 0; i < qtdUnidade / 2; i++)
+            for (int i = 0; i < qtdCabo / 2; i++)
             {
-                itens[indexes[index++]] = (Int32)Type.Unidade;
+                itens[indexes[index++]] = (Int32)Type.Cabo;
+            }
+
+            for (int i = 0; i < qtdCoronel / 2; i++)
+            {
+                itens[indexes[index++]] = (Int32)Type.Coronel;
+            }
+
+            for (int i = 0; i < qtdSargento / 2; i++)
+            {
+                itens[indexes[index++]] = (Int32)Type.Sargento;
+            }
+
+            for (int i = 0; i < qtdTenente / 2; i++)
+            {
+                itens[indexes[index++]] = (Int32)Type.Tenente;
             }
 
             for (int i = 0; i < qtdTerra / 2; i++)

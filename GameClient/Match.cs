@@ -30,7 +30,10 @@ namespace GameClient
             Terra = 1,
             Pedra = 2,
             Item = 3,
-            Unidade = 4
+            Cabo = 4,
+            Coronel = 5,
+            Sargento = 6,
+            Tenente = 7
         }
 
         public Match(EventHandler EnemyAttack, EventHandler EndGame)
@@ -74,7 +77,11 @@ namespace GameClient
 
                 btn.BackgroundImage = btn.Item;
                 this.Enabled = true;
-                if (btn.Type == Type.Unidade)
+                if (btn.Type == Type.Cabo
+                    || btn.Type == Type.Coronel
+                    || btn.Type == Type.Sargento
+                    || btn.Type == Type.Tenente
+                    )
                 {
                     this.myUnities--;
                     if (this.myUnities == 35)
@@ -217,14 +224,59 @@ namespace GameClient
                                     Btn_Click_Enemy(sender, e, Resources.Pedra, false);
                                 };
                                 break;
-                            case (Int32)Type.Unidade:
+                            case (Int32)Type.Cabo:
 
                                 lblEnemyUnities.Text = $"Restam: {enemyUnities}";
                                 btn.Click += (object sender, System.EventArgs e) =>
                                 {
                                     if (isFirst == 0)
                                     {
-                                        Btn_Click_Enemy(sender, e, Resources.Unidade_Azul_Top_Queb, true);
+                                        Btn_Click_Enemy(sender, e, Resources.Unidade_Vermelha_Top_Queb, true);
+                                    }
+                                    else
+                                    {
+                                        Btn_Click_Enemy(sender, e, Resources.Unidade_Vermelha_Top_Queb, true);
+                                    }
+                                };
+                                break;
+                            case (Int32)Type.Coronel:
+
+                                lblEnemyUnities.Text = $"Restam: {enemyUnities}";
+                                btn.Click += (object sender, System.EventArgs e) =>
+                                {
+                                    if (isFirst == 0)
+                                    {
+                                        Btn_Click_Enemy(sender, e, Resources.Unidade_Vermelha_Top_Queb, true);
+                                    }
+                                    else
+                                    {
+                                        Btn_Click_Enemy(sender, e, Resources.Unidade_Vermelha_Top_Queb, true);
+                                    }
+                                };
+                                break;
+                            case (Int32)Type.Sargento:
+
+                                lblEnemyUnities.Text = $"Restam: {enemyUnities}";
+                                btn.Click += (object sender, System.EventArgs e) =>
+                                {
+                                    if (isFirst == 0)
+                                    {
+                                        Btn_Click_Enemy(sender, e, Resources.Unidade_Vermelha_Top_Queb, true);
+                                    }
+                                    else
+                                    {
+                                        Btn_Click_Enemy(sender, e, Resources.Unidade_Vermelha_Top_Queb, true);
+                                    }
+                                };
+                                break;
+                            case (Int32)Type.Tenente:
+
+                                lblEnemyUnities.Text = $"Restam: {enemyUnities}";
+                                btn.Click += (object sender, System.EventArgs e) =>
+                                {
+                                    if (isFirst == 0)
+                                    {
+                                        Btn_Click_Enemy(sender, e, Resources.Unidade_Vermelha_Top_Queb, true);
                                     }
                                     else
                                     {
@@ -290,19 +342,68 @@ namespace GameClient
                                 btn.Type = Type.Pedra;
                                 btn.Item = Resources.Pedra;
                                 break;
-                            case (Int32)Type.Unidade:
+                            case (Int32)Type.Cabo:
                                 btn.Enabled = true;
-                                btn.Type = Type.Unidade;
+                                btn.Type = Type.Cabo;
                                 lblMyUnities.Text = $"Restam: {myUnities}";
                                 if (isFirst == 1)
                                 {
+
                                     btn.BackgroundImage = Resources.Unidade_Azul_Bottom;
-                                    btn.Item = Resources.Unidade_Azul_Bottom_Queb;
+                                    btn.Item = Resources.Unidade_Vermelha_Top_Queb;
                                 }
                                 else
                                 {
                                     btn.BackgroundImage = Resources.Unidade_Vermelha_Bottom;
-                                    btn.Item = Resources.Unidade_Vermelha_Bottom_Queb;
+                                    btn.Item = Resources.Unidade_Vermelha_Top_Queb;
+                                }
+                                break;
+                            case (Int32)Type.Coronel:
+                                btn.Enabled = true;
+                                btn.Type = Type.Coronel;
+                                lblMyUnities.Text = $"Restam: {myUnities}";
+                                if (isFirst == 1)
+                                {
+
+                                    btn.BackgroundImage = Resources.Unidade_Azul_Sem_Terra_Top;
+                                    btn.Item = Resources.Unidade_Vermelha_Top_Queb;
+                                }
+                                else
+                                {
+                                    btn.BackgroundImage = Resources.Unidade_Vermelha_Sem_Terra_Top;
+                                    btn.Item = Resources.Unidade_Vermelha_Top_Queb;
+                                }
+                                break;
+                            case (Int32)Type.Sargento:
+                                btn.Enabled = true;
+                                btn.Type = Type.Sargento;
+                                lblMyUnities.Text = $"Restam: {myUnities}";
+                                if (isFirst == 1)
+                                {
+
+                                    btn.BackgroundImage = Resources.Unidade_Azul_Bottom_Queb;
+                                    btn.Item = Resources.Unidade_Vermelha_Top_Queb;
+                                }
+                                else
+                                {
+                                    btn.BackgroundImage = Resources.Unidade_Vermelha_Bottom_Queb;
+                                    btn.Item = Resources.Unidade_Vermelha_Top_Queb;
+                                }
+                                break;
+                            case (Int32)Type.Tenente:
+                                btn.Enabled = true;
+                                btn.Type = Type.Tenente;
+                                lblMyUnities.Text = $"Restam: {myUnities}";
+                                if (isFirst == 1)
+                                {
+
+                                    btn.BackgroundImage = Resources.Unidade_Azul_Sem_Terra_Bottom;
+                                    btn.Item = Resources.Unidade_Vermelha_Top_Queb;
+                                }
+                                else
+                                {
+                                    btn.BackgroundImage = Resources.Unidade_Vermelha_Sem_Terra_Bottom;
+                                    btn.Item = Resources.Unidade_Vermelha_Top_Queb;
                                 }
                                 break;
                         }
@@ -355,8 +456,8 @@ namespace GameClient
                 {
                     enemyUnities--;
 
-                        lblEnemyUnities.Text = $"Restam: {enemyUnities}";
-                    
+                    lblEnemyUnities.Text = $"Restam: {enemyUnities}";
+
                 }
                 this.EnemyAttack.Invoke(this, new EnemyAttackEventArgs()
                 {

@@ -173,7 +173,7 @@ namespace GameClient
                     pbFlagTeamTop.BackgroundImage = Resources.Bandeira_Vermelha;
                     pbFlagTeamBottom.BackgroundImage = Resources.Bandeira_Azul;
 
-                    pbUnityBottom.BackgroundImage = Resources.Unidade_Azul_Sem_Terra_Bottom;
+                    pbUnityBottom.BackgroundImage = Resources.Unidade_Azul_Sem_Terra_Top;
                     pbUnityTop.BackgroundImage = Resources.Unidade_Vermelha_Sem_Terra_Top;
                 }
                 else
@@ -185,7 +185,7 @@ namespace GameClient
                     pbFlagTeamBottom.BackgroundImage = Resources.Bandeira_Vermelha;
 
                     pbUnityTop.BackgroundImage = Resources.Unidade_Azul_Sem_Terra_Top;
-                    pbUnityBottom.BackgroundImage = Resources.Unidade_Vermelha_Sem_Terra_Bottom;
+                    pbUnityBottom.BackgroundImage = Resources.Unidade_Vermelha_Sem_Terra_Top;
                 }
                 int btnX = btnWidth * (totalColumns - 1);
                 int btnY = btnHeight * (totalLinesSeparator - 1);
@@ -502,7 +502,7 @@ namespace GameClient
         }
         private void btnClose_Click(object sender, System.EventArgs e)
         {
-            DialogResult resposta = MessageBox.Show("Você deseja realmente hastear bandeira branca e desistir da partida?", "Surrender", MessageBoxButtons.YesNo);
+            DialogResult resposta = MessageBox.Show("Vai fugir mesmo seu frangote?", "Surrender", MessageBoxButtons.YesNo);
 
             if (resposta == DialogResult.Yes)
             {
